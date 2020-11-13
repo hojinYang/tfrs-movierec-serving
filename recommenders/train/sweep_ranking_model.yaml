@@ -1,0 +1,26 @@
+program: train/run_sweep.py
+method: grid
+metric:
+  name: val_root_mean_squared_error
+  goal: minimize
+parameters:
+  dataset:
+    value: Dataset
+  model:
+    value: RankingModel
+  network:
+    value: ranking_neural_cf
+  network_args.embedding_dimension:
+    value: 32
+  network_args.hidden_layers:
+    value: [32,16]
+  network_args.dropout_amount:
+    values: [0.2, 0]
+  train_args.regularization_weight:
+    values: [0, 1e-3]
+  train_args.epochs:
+    value: 100
+  train_args.learning_rate:
+    value: 1e-3
+  train_args.optimizer:
+    values: [SGD, Adam]

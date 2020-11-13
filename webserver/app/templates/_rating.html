@@ -1,0 +1,17 @@
+<table>
+    <tr>
+      <td><a href="{{ url_for('movie', username=user.username, movieid=rating.movie.movieid) }}"><img src="{{ rating.movie.cover }}"></a></td>
+    </tr>
+    <tr>
+      <td>
+        <form action="{{ url_for('update', username=user.username) }}" method="post">
+          {{ form.csrf_token() }}
+          {{ form.set_default_value(rating.rating) }}
+          {{ form.movie_id(value=rating.movie.movieid)}}
+          {{ form.rating() }} {{ form.submit() }}
+        </form>
+      </td>
+    </tr>
+</table>
+
+

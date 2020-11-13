@@ -1,0 +1,20 @@
+program: train/run_sweep.py
+method: grid
+metric:
+  name: val_factorized_top_k/top_10_categorical_accuracy
+  goal: minimize
+parameters:
+  dataset:
+    value: Dataset
+  model:
+    value: RetrievalModel
+  network:
+    value: retrieval_basic_factorization
+  network_args.embedding_dimension:
+    values: [32, 64, 128]
+  train_args.epochs:
+    value: 120
+  train_args.learning_rate:
+    value: 1e-3
+  train_args.optimizer:
+    value: SGD

@@ -1,0 +1,24 @@
+wandb_version: 1
+
+dataset:
+  value: Dataset
+model:
+  value: RankingModel
+network:
+  value: ranking_neural_cf
+network_args.dropout_amount:
+  value: 0.2
+network_args.embedding_dimension:
+  value: 32
+network_args.hidden_layers:
+  value:
+  - 32
+  - 16
+train_args.epochs:
+  value: 100
+train_args.learning_rate:
+  value: 0.001
+train_args.optimizer:
+  value: Adam
+train_args.regularization_weight:
+  value: 0.001

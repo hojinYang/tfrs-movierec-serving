@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <h1>User: {{ user.username }}</h1>
+    <hr>
+    <h2>History</h2>
+    <table>
+        <tr valign="top">
+        {% for rating in ratings %}
+            <td>
+            {% include '_rating.html' %}
+           </td>
+       {% endfor %}
+        </tr>
+    </table>
+    <hr>
+    <h2>Recommendation</h2>
+    <table>
+        <tr valign="top">
+        {% for movie in recs %}
+            <td>
+            {% include '_movie.html' %}
+           </td>
+       {% endfor %}
+        </tr>
+    </table>
+
+
+{% endblock %}

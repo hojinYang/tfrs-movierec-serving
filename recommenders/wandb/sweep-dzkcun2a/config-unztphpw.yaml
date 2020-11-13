@@ -1,0 +1,16 @@
+wandb_version: 1
+
+dataset:
+  value: Dataset
+model:
+  value: RetrievalModel
+network:
+  value: retrieval_basic_factorization
+network_args.embedding_dimension:
+  value: 64
+train_args.epochs:
+  value: 120
+train_args.learning_rate:
+  value: 0.001
+train_args.optimizer:
+  value: SGD

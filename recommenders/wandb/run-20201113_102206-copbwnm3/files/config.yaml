@@ -1,0 +1,63 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.8
+    framework: tensorflow
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+dataset:
+  desc: null
+  value: Dataset
+dataset_args:
+  desc: null
+  value:
+    batch_size: 2048
+    test_fraction: 0.3
+model:
+  desc: null
+  value: RankingModel
+network:
+  desc: null
+  value: ranking_neural_cf
+network_args:
+  desc: null
+  value:
+    dropout_amount: 0.2
+    embedding_dimension: 32
+    hidden_layers:
+    - 32
+    - 16
+    regularization_weight: 0.01
+network_args.dropout_amount:
+  desc: null
+  value: 0.2
+network_args.embedding_dimension:
+  desc: null
+  value: 32
+network_args.hidden_layers:
+  desc: null
+  value:
+  - 32
+  - 16
+train_args:
+  desc: null
+  value:
+    epochs: 100
+    learning_rate: 0.001
+    optimizer: SGD
+    regularization_weight: 0.001
+train_args.epochs:
+  desc: null
+  value: 100
+train_args.learning_rate:
+  desc: null
+  value: 0.001
+train_args.optimizer:
+  desc: null
+  value: SGD
+train_args.regularization_weight:
+  desc: null
+  value: 0.001

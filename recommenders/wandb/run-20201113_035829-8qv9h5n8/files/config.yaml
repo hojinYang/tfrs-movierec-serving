@@ -1,0 +1,46 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.8
+    framework: tensorflow
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+dataset:
+  desc: null
+  value: Dataset
+dataset_args:
+  desc: null
+  value:
+    batch_size: 4056
+    test_fraction: 0.3
+model:
+  desc: null
+  value: RetrievalModel
+network:
+  desc: null
+  value: retrieval_basic_factorization
+network_args:
+  desc: null
+  value:
+    embedding_dimension: 128
+network_args.embedding_dimension:
+  desc: null
+  value: 128
+train_args:
+  desc: null
+  value:
+    epochs: 120
+    learning_rate: 0.001
+    optimizer: SGD
+train_args.epochs:
+  desc: null
+  value: 120
+train_args.learning_rate:
+  desc: null
+  value: 0.001
+train_args.optimizer:
+  desc: null
+  value: SGD

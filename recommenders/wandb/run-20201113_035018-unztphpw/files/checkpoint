@@ -1,0 +1,2 @@
+model_checkpoint_path: "query"
+all_model_checkpoint_paths: "query"

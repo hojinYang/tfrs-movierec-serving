@@ -1,0 +1,2 @@
+model_checkpoint_path: "ranking"
+all_model_checkpoint_paths: "ranking"

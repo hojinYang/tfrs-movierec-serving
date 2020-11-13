@@ -1,0 +1,27 @@
+{
+    "os": "Linux-5.4.0-51-generic-x86_64-with-glibc2.10",
+    "python": "3.8.5",
+    "heartbeatAt": "2020-11-13T15:23:18.937925",
+    "startedAt": "2020-11-13T15:23:17.162322",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "--dataset=Dataset",
+        "--model=RankingModel",
+        "--network=ranking_neural_cf",
+        "--network_args.dropout_amount=0.2",
+        "--network_args.embedding_dimension=32",
+        "--network_args.hidden_layers=[32, 16]",
+        "--train_args.epochs=100",
+        "--train_args.learning_rate=0.001",
+        "--train_args.optimizer=Adam",
+        "--train_args.regularization_weight=0"
+    ],
+    "state": "running",
+    "codePath": "train/run_sweep.py",
+    "program": "train/run_sweep.py",
+    "host": "hojin-UX530UQ",
+    "username": "hojin",
+    "executable": "/home/hojin/anaconda3/envs/tfrs/bin/python"
+}

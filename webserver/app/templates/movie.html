@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ movie.cover }}"></td>
+                <td> <h1>{{ movie.title }}</h1>
+                    <h2>({{movie.year}})</h2> </td>
+        </tr>
+    </table>
+    
+    <hr>
+    {{ movie.plot }}
+    </br>
+    
+    <a href= "{{ url_for('user', username=user.username) }}"> Back</a>
+
+{% endblock %}

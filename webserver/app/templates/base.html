@@ -1,0 +1,17 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - SimpleTFRS</title>
+      {% else %}
+      <title>SimpleTFRS</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+            SimpleTFRS: 
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

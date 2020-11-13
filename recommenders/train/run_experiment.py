@@ -89,15 +89,6 @@ def _get_optimizer(name: str = 'SGD'):
         return tf.keras.optimizers.SGD
 
 def main():
-    """Run experiment."""
-    #args = _parse_args()
-
-    #if args.gpu < 0:
-    #    gpu_manager = GPUManager()
-    #    args.gpu = gpu_manager.get_free_gpu()  # Blocks until one is available
-
-    #experiment_config = json.loads(args.experiment_config)
-    #os.environ["CUDA_VISIBLE_DEVICES"] = f"{args.gpu}"
     """
     d=  {
             "dataset": "Dataset",

@@ -23,6 +23,9 @@ export PYTHONPATH
 before executing any commands later on, or add those lines to ```.bashrc``` if you want to add them permanently.
 
 ## Recommenders
+
+![](./img/recommenders.png) 
+
 In general, the recommendation system consists of two stages: retrieval and ranking. The retrieval phase serves to select an initial set of hundreds of candidates from all possible items. The ranking model takes the output of the retrieval model and fine-tune it to increase recommendation quality. This repository contains tfrs-based retrieval and ranking models. We also use [Annoy](https://github.com/spotify/annoy) to build an [Approximate Nearest Neighbor](https://towardsdatascience.com/comprehensive-guide-to-approximate-nearest-neighbors-algorithms-8b94f057d6b6) (ANN) index to export for efficient candidate retireval.
 
 For now this repository contains MF network for retrieval and NCF-style network for ranking model, though you can define your custom networks in ```recommenders/networks```. There are warpper classes called Retireval model and Ranking model in ```recommenders/models```. When training model, (custom) networks are plugged in these classes which support loss function and evaluation metric.   

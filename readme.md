@@ -3,7 +3,7 @@
 This repository contains movie recommendation systems using [tensorflow-recommenders](https://github.com/tensorflow/recommenders)(tfrs) which is a library for building recommender system models using tensorflow. 
 - The code is based on Tensorflow and keras, but designed to be modular and scalable.
 - For experiment management (training, parameter search, and storing model) we use 'Weight & Biases'.
-- We use 'Annoy' to build an Approximate Nearest Neighbor (ANN) index to export for efficient candidate retireval.
+- We use 'Annoy' to build an Approximate Nearest Neighbor (ANN) index to export for efficient candidate retrieval.
 - The recommender systems are packaged as a REST API.
 - This repository also contains a minimal implementation of local web server where users can rate recommended movies as well as check his/her movie history and information of those movies. 
 
@@ -24,7 +24,7 @@ before executing any commands later on, or add those lines to ```.bashrc``` if y
 
 ## Recommenders
 
-In general, the recommendation system consists of two stages: retrieval and ranking. (1) The retrieval phase serves to select an initial set of hundreds of candidates from all possible items. (2) The ranking model takes the output of the retrieval model and fine-tune it to increase recommendation quality. This repository contains tfrs-based retrieval and ranking models. We also use [Annoy](https://github.com/spotify/annoy) to build an [Approximate Nearest Neighbor](https://towardsdatascience.com/comprehensive-guide-to-approximate-nearest-neighbors-algorithms-8b94f057d6b6) (ANN) index to export for efficient candidate retireval.
+In general, the recommendation system consists of two stages: retrieval and ranking. (1) The **retrieval** phase serves to select an initial set of hundreds of candidates from all possible items. (2) The **ranking** model takes the output of the retrieval model and fine-tune it to increase recommendation quality. This repository contains tfrs-based retrieval and ranking models. We also use [Annoy](https://github.com/spotify/annoy) to build an [Approximate Nearest Neighbor](https://towardsdatascience.com/comprehensive-guide-to-approximate-nearest-neighbors-algorithms-8b94f057d6b6) (ANN) index to export for efficient candidate retireval.
 
 For now this repository contains MF network for retrieval and NCF-style network for ranking model, though you can define your custom networks in ```recommenders/networks```. There are two warpper classes called Retireval model and Ranking model in ```recommenders/models```. When training model, (custom) networks are plugged in these classes which support loss function and evaluation metric.   
 
